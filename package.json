@@ -1,0 +1,66 @@
+{
+  "name": "aio-social",
+  "version": "1.0.0",
+  "description": "AIỎ - Quản lý đa nền tảng mạng xã hội",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build:publish": "electron-builder --win --x64 --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nct88/aio-social-multi-win.git"
+  },
+  "author": "truongit",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^42.1.0",
+    "electron-builder": "^26.8.1",
+    "png-to-ico": "^3.0.1"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.3"
+  },
+  "build": {
+    "appId": "me.truong.aiosocial",
+    "productName": "AIỎ",
+    "copyright": "© 2026 truong.me",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app.js",
+      "index.html",
+      "styles.css",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/app-icon.png",
+      "artifactName": "AIỎ-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "AIỎ",
+      "menuCategory": true
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "nct88",
+      "repo": "aio-social-multi-win",
+      "releaseType": "release"
+    }
+  }
+}

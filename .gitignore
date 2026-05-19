@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Electron build output
+dist/
+out/
+release/
+build/
+
+# Encrypted settings & session data (SENSITIVE!)
+*.enc
+aio_settings*.json
+Partitions/
+
+# Backup files (chứa thông tin cá nhân)
+*.aio
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temporary files
+tmp/
+*.tmp
